@@ -24,9 +24,12 @@
 .poacher-main {
   margin-top: 7rem;
   min-height: 85vh;
-  width:75vw;
+  min-width:75vw;
   background-color:white;
   overflow: auto;
+  border-radius:5px;
+  border:1px solid black;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* For Data Table */
@@ -57,6 +60,7 @@ th,td{
   border: 1px solid #443c68;
   padding: 1.5rem;
   line-height: 1.7;
+  color:black;
 }
 td{
   font-size: 1.4rem;
