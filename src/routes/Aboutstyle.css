@@ -10,7 +10,7 @@
     border-radius: 5px;
     box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3);
   }
-  h1,h2{
+ .abt-h1{
       color:whitesmoke;
   }
   .about-banner img {
