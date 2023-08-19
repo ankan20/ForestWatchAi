@@ -1,0 +1,26 @@
+/* Loading spinner styling */
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1); /* Outer border with slight transparency */
+  border-left: 4px solid #000; /* Black border for spinning effect */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite; /* Apply the spinning animation */
+  margin: 20px auto;
+}
+
+/* Adjusts the positioning and height of .poacher-main */
+.poacher-main {
+  margin-top: 7rem;
+  height: 80vh;
+}
+
+/* Keyframes for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Starting rotation angle */
+  }
+  100% {
+    transform: rotate(360deg); /* Ending rotation angle (full circle) */
+  }
+}
