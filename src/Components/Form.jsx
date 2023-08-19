@@ -55,7 +55,7 @@ function Form(props){
 
         const {fname,lname,email,password,confirmPassword}=dataSignup;
         //  "proxy": "http://localhost:8000",
-        const res=await fetch("http://localhost:8000/register",{
+        const res=await fetch("https://auth-handler-forestwatchai.onrender.com/register",{
           credentials: "include",
           method: "POST",
           headers: {
@@ -111,7 +111,7 @@ function Form(props){
         e.preventDefault();
 
         const {email,password}=dataLogin;
-        const res=await fetch("http://localhost:8000/login",{
+        const res=await fetch("https://auth-handler-forestwatchai.onrender.com/login",{
           credentials: "include",
           method: "POST",
           headers: {
@@ -166,7 +166,7 @@ function Form(props){
         e.preventDefault();
 
         const {name,phone,email,subject,message}=dataContact;
-        const res=await fetch("http://localhost:8000/contact",{
+        const res=await fetch("https://auth-handler-forestwatchai.onrender.com/contact",{
           credentials: "include",
           method: "POST",
           headers: {
