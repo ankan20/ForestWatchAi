@@ -9,6 +9,11 @@
   margin: 20px auto;
 }
 
+#for-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #for-fir-main {
   margin-top: 7rem;
