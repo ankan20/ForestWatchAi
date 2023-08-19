@@ -14,8 +14,8 @@ function Home() {
 
         <section  className="page hero">
           <div id="heading">
-            <h1>Welcome to ForestWatchAI Website</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, nisi.</p>
+            <h1>Eyes in the Woods:AI on Duty</h1>
+          <p>Empowering conservation through AI and image analysis. Hunter detection, alerts for authorities, plus fire and flood prevention via data-driven monitoring</p>
             <div className="btn-box">
               <a href="/login" className="btn">
                 Login
