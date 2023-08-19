@@ -44,7 +44,7 @@ function Home() {
         <section id="page-3" className="page">
   <div id="page3-con">
     <div id="map-weather-section">  
-      <div id="map-box" className="hover-div>
+      <div id="map-box" className="hover-div">
         
         <a href="https://goo.gl/maps/r5npWdVNZZGasXUg8" target="_blank">
           <img id="map-img" src="https://thewire.in/wp-content/uploads/2016/09/Sunderbans-map-with-Sela-river.png" alt="Map Image" />
