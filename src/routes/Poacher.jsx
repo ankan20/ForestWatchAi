@@ -56,29 +56,31 @@ function Poacher() {
   return (
     <>
       <Navbar/>
-    <div className="poacher-main">
-     
-      <h1 style={{ fontSize: 50 }}>Poacher Detection</h1>
-      <input type="file" accept="image/*" onChange={handleImageChange} />
-      {imagePreview && (
-        <div>
-          <h2 style={{ fontSize: 30 }}>Preview:</h2>
-          <img style={{ width: 400, height: 400 }} src={imagePreview} alt="Uploaded" />
-          <button onClick={imageSubmit}>Submit Image</button>
-        </div>
-      )}
-      {isLoading && (
-        <div className="loading-spinner"></div>
-      )}
-      {base64Url && !isLoading && (
-        <div>
-          <h2>Response From ML API:</h2>
-          <p style={{ color: "white", fontWeight: 500, fontSize: 20 }}>The given photo is {resData}</p>
-          
-        </div>
+      <div id="poacher-1">
+        <div className="poacher-main">
          
-      )}
-    </div>
+          <h1 style={{ fontSize: 50 }}>Poacher Detection</h1>
+          <input type="file" accept="image/*" onChange={handleImageChange} />
+          {imagePreview && (
+            <div>
+              <h2 style={{ fontSize: 30 }}>Preview:</h2>
+              <img style={{ width: 400, height: 400 }} src={imagePreview} alt="Uploaded" />
+              <button onClick={imageSubmit}>Submit Image</button>
+            </div>
+          )}
+          {isLoading && (
+            <div className="loading-spinner"></div>
+          )}
+          {base64Url && !isLoading && (
+            <div>
+              <h2>Response From ML API:</h2>
+              <p style={{ color: "white", fontWeight: 500, fontSize: 20 }}>The given photo is {resData}</p>
+              
+            </div>
+             
+          )}
+          </div>
+        </div>
        <Footer/>
       </>
   );
