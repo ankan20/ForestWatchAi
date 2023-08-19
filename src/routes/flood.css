@@ -9,7 +9,12 @@
   margin: 20px auto;
 }
 
-/* Adjusts the positioning and height of .poacher-main */
+#flood-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #flood-main {
   margin-top: 7rem;
   height: 80vh;
