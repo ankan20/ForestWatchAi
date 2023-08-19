@@ -21,6 +21,7 @@
   width:75vw;
   background-color:white;
   overflow: auto;
+  color:black;
 }
 
 /* Keyframes for the spinning animation */
