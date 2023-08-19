@@ -6,8 +6,10 @@ function Flood(){
     return(
     <>    
         <Navbar/>
-        <div id="flood-main">
+        <div id="flood-1">
+            <div id="flood-main">
             <h1>FLOOD ALERT</h1>
+            </div>
         </div>
         <Footer/>
     </>
