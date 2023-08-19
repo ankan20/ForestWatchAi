@@ -17,9 +17,10 @@
 /* Adjusts the positioning and height of .poacher-main */
 .poacher-main {
   margin-top: 7rem;
-  height: 85vh;
+  min-height: 85vh;
   width:75vw;
   background-color:white;
+  overflow: auto;
 }
 
 /* Keyframes for the spinning animation */
