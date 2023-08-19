@@ -58,7 +58,7 @@ function Poacher() {
 
   const getPoacherData=async()=>{
     try{
-        const res=await fetch("http://localhost:8000/poacherData",{
+        const res=await fetch("https://auth-handler-forestwatchai.onrender.com/poacherData",{
             method:"GET",
             headers:{
                 "Content-Type":"application/json",
@@ -93,6 +93,7 @@ function Poacher() {
         <div className="poacher-main">
          
           <h1 style={{ fontSize: 50 }}>Poacher Detection</h1>
+          <h2>Input an image to test the feature:</h2>
           <input type="file" accept="image/*" onChange={handleImageChange} />
           {imagePreview && (
             <div>
@@ -107,12 +108,15 @@ function Poacher() {
           {base64Url && !isLoading && (
             <div>
               <h2>API Response:</h2>
-              <p style={{color:"black"}}>The given photo is {resData}</p>
+              <p>The given photo is {resData}</p>
               
             </div> 
           )}
           <div>
-        <table>
+          <div className="dataTable_heading">
+            <h1>Past Poacher Sightings:</h1>
+          </div>
+          <table>
             <thead>
                 <tr>
                     <th>Image</th>
@@ -135,9 +139,9 @@ function Poacher() {
                     })
                   }
             </tbody>
-        </table>
-      </div>
-          </div>
+          </table>
+        </div>
+        </div>
         </div>
        <Footer/>
       </>
