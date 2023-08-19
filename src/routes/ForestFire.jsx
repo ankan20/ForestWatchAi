@@ -6,10 +6,12 @@ function ForestFire(){
     return (
     <>  
          <Navbar/>
-        <div id="for-fir-main">
+        <div id="for-1">
+            <div id="for-fir-main">
            
                 <h1>FOREST FIRE ALERT</h1>
             
+            </div>
         </div>
         <Footer/>
     </>
