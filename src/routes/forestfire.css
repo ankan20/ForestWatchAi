@@ -20,8 +20,11 @@
   margin-top: 7rem;
   min-height: 80vh;
   background-color:white;
-  width:70vw;
+  min-width:70vw;
   overflow: auto;
+  border-radius:5px;
+  border:1px solid black;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Keyframes for the spinning animation */
