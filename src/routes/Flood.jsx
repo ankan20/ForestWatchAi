@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import "./flood.css";
 function Flood(){
-    return
+    return(
     <>    
         <Navbar/>
         <div id="flood-main">
@@ -11,6 +11,7 @@ function Flood(){
         </div>
         <Footer/>
     </>
+        )
 }
 
 export default Flood;
