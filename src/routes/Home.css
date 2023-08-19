@@ -32,8 +32,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     align-items: flex-start;
+    
   }
   
   #heading {
@@ -44,8 +44,12 @@
   #heading h1 {
     font-size: 5.5vw;
     line-height: 1;
-    font-weight: 900;
+    font-weight: 600;
   }
+
+    #heading p{
+        margin-top:30px;
+    }
   
   .btn-box {
     margin-top: 20px;
@@ -63,15 +67,17 @@
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-    color: black;
-    background-color: rgb(8, 201, 201,0.5);
+    color: white;
+    background-color: #211f1f;
     text-decoration: none;
     transition: 0.3s ease-in;
+    font-size: 20px;
+    font-weight: 500;
   }
   
   .btn:hover {
-    background-color: rgba(246, 250, 190, 0.861);
-    box-shadow: 2.5px 2.5px rgb(239, 226, 226);
+    background-color: #535555;
+   
   }
   
   /* page-2 */
