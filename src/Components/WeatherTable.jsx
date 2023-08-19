@@ -45,12 +45,7 @@ const WeatherTable = ({ location }) => {
         <p>Loading weather data...</p>
       )}
     </div>
-    <div id='weather-text'>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-    </div>
+    
     </>
   );
 };
