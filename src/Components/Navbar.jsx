@@ -11,10 +11,13 @@ class Navbar extends Component {
         return(
             <nav className="NavbarItems">
 
-                <h1 className="navbar-logo">ForestWatchAI</h1>
+                <a href="/"><h1 className="navbar-logo">FOREST WATCH AI</h1></a>
                                        
                 <div className="menu-icons" onClick={this.handleClick} >
-                    <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars" }></i>
+                    <i className={this.state.clicked ? "fas fa-times " : "fas fa-bars " } style={{color:"white"}}></i>
+                    
+
+                    
                 </div>
 
                 <ul className={this.state.clicked ? "nav-menu active" : "nav-menu "}>
@@ -29,7 +32,7 @@ class Navbar extends Component {
                     }
                     )}
                     
-                    <a href="/signup"><button id="nav-btn">Sign Up</button></a>
+                    <button id="nav-btn">Sign Up</button>
                 </ul>
 
             </nav>
