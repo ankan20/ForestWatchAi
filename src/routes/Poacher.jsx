@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Poacher.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -7,12 +7,14 @@ function Poacher() {
   const [base64Url, setBase64Url] = useState(null);
   const [resData, setresData] = useState(null);
   const [isLoading, setLoading] = useState(false);
+  const [poacherData,setPoacherData]=useState([]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
+        console.log(reader.result);
         setImagePreview(reader.result);
         setBase64Url(reader.result.split(",")[1]);
       };
@@ -53,6 +55,37 @@ function Poacher() {
     }
   };
 
+
+  const getPoacherData=async()=>{
+    try{
+        const res=await fetch("http://localhost:8000/poacherData",{
+            method:"GET",
+            headers:{
+                "Content-Type":"application/json",
+                'Accept': 'application/json'
+            }
+        });
+
+        if (!res.ok) {
+            throw new Error("Request failed");
+        }
+        
+        const data=await res.json();
+        if(data.length > 0){
+            setPoacherData(data);
+        }
+        console.log(data);
+    }catch(err){
+        console.log(`The error is:${err}`);
+    }
+  }
+  
+  useEffect(()=>{
+    getPoacherData();
+  },[resData]);
+
+
+
   return (
     <>
       <Navbar/>
@@ -73,12 +106,37 @@ function Poacher() {
           )}
           {base64Url && !isLoading && (
             <div>
-              <h2>Response From ML API:</h2>
-              <p style={{ color: "white", fontWeight: 500, fontSize: 20 }}>The given photo is {resData}</p>
+              <h2>API Response:</h2>
+              <p>The given photo is {resData}</p>
               
-            </div>
-             
+            </div> 
           )}
+          <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Capture Time</th>
+                    <th>Capture Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                  {
+                    poacherData.map((tableData)=>{
+                      const {_id,imagedata,capturetime,capturelocation}=tableData;
+                      const imageURL="data:image/jpeg;base64," + imagedata;
+                      return (
+                        <tr key={_id}>
+                          <td ><img style={{width:300,height:200}} src={imageURL} alt="Human Image" /></td>
+                          <td >{capturetime}</td>
+                          <td >{capturelocation}</td>
+                        </tr>
+                      )
+                    })
+                  }
+            </tbody>
+        </table>
+      </div>
           </div>
         </div>
        <Footer/>
