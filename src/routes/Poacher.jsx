@@ -107,7 +107,7 @@ function Poacher() {
           {base64Url && !isLoading && (
             <div>
               <h2>API Response:</h2>
-              <p style={{color:black}}>The given photo is {resData}</p>
+              <p style={{color:"black"}}>The given photo is {resData}</p>
               
             </div> 
           )}
