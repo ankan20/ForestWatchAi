@@ -33,6 +33,7 @@ function Home() {
 
             <div>
                 <h1>NEWS</h1>
+                <p>This feature will be added latter</p>
             </div>
 
         </section>
