@@ -17,9 +17,10 @@
 
 #flood-main {
   margin-top: 7rem;
-  height: 80vh;
+  min-height: 80vh;
   background-color:white;
   width:70vw;
+  overflow: auto;
 }
 
 /* Keyframes for the spinning animation */
