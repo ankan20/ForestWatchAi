@@ -48,7 +48,7 @@ function Home() {
         
         <a href="https://goo.gl/maps/r5npWdVNZZGasXUg8" target="_blank">
           <img id="map-img" src="https://thewire.in/wp-content/uploads/2016/09/Sunderbans-map-with-Sela-river.png" alt="Map Image" />
-          <span class="hover-text">Map</span>
+          <span class="hover-text">Map of Sundarban</span>
         </a>
       </div>
 
