@@ -1,15 +1,17 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import "./forestfire.css";
 function ForestFire(){
     return (
     <>  
-        
+         <Navbar/>
         <div id="for-fir-main">
-            <Navbar/>
+           
                 <h1>FOREST FIRE ALERT</h1>
-            <Footer/>
+            
         </div>
+        <Footer/>
     </>
         )
 }
