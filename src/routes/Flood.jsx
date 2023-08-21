@@ -27,7 +27,7 @@ function Flood(){
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({  floodsensordata:parseInt(waterLevel) }), // Send temperature as JSON
+        body: JSON.stringify({  floodsensordata:parseInt(Temperature) }), // Send temperature as JSON
       });
       setLoading(false);
       if (!response.ok) {
