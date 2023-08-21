@@ -114,11 +114,6 @@
 // export default Flood;
 
 
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import "./Poacher.css";
 import TableData from '../Components/TableData';
@@ -207,6 +202,13 @@ function Flood() {
               <p>{responseMessage}</p>
             </div>
           )}
+          {/* Display the entered water level */}
+          {waterLevel && (
+            <div>
+              <h2>Entered Water Level:</h2>
+              <p>{waterLevel}</p>
+            </div>
+          )}
           <div>
             <div className="dataTable_heading">
               <h1>Past Water Level Data:</h1>
@@ -228,6 +230,16 @@ function Flood() {
       </div>
       <Footer />
     </>
+  );
+}
+
+export default Flood;
+
+
+
+
+
+
   );
 }
 
